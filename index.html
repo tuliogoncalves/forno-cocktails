@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu do Bar | Moderno</title>
+    <title>Forno & Cocktails | Artesania Líquida</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -145,20 +145,81 @@
             font-size: 0.9rem;
         }
 
+        .hero-tagline {
+            font-size: 1rem;
+            color: var(--accent-color);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: #fff;
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .institutional {
+            text-align: center;
+            padding: 3rem 2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            border-bottom: 1px solid #333;
+        }
+
+        .institutional h2 {
+            color: var(--accent-color);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .institutional p {
+            color: var(--secondary-text);
+            font-size: 1rem;
+            line-height: 1.9;
+            font-style: italic;
+        }
+
+        .institutional .signature {
+            margin-top: 1.5rem;
+            color: var(--accent-color);
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
         @media (max-width: 768px) {
-            header h1 { font-size: 2.5rem; }
-            .category-title { font-size: 2rem; }
+            header h1 { font-size: 2rem; }
+            .category-title { font-size: 1.8rem; }
+            .hero-tagline { font-size: 0.85rem; }
+            .institutional h2 { font-size: 1.4rem; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>THE BAR</h1>
-        <p>Cocktail Menu & Lounge</p>
+        <p class="hero-tagline">Artesania líquida. Fogo, tempo e precisão.</p>
+        <h1>FORNO & COCKTAILS</h1>
+        <p class="hero-subtitle">Drinks autorais criados com técnica, fogo e precisão.</p>
     </header>
 
     <div class="container">
+
+        <section class="institutional">
+            <h2>O Mestre Artesão</h2>
+            <p>
+                Forno & Cocktails nasce da paixão por processos artesanais.<br>
+                Da cozinha ao forno, da pizza ao copo, cada drink é criado com técnica, equilíbrio e respeito ao ingrediente.<br>
+                Aqui, o tempo é parte da receita.
+            </p>
+            <p class="signature">- A Casa -</p>
+        </section>
 
         <h2 class="category-title">Clássicos da Casa</h2>
         <div class="drink-grid">
@@ -341,7 +402,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2025 THE BAR - Beba com moderação.</p>
+        <p>&copy; 2025 FORNO & COCKTAILS - Artesania líquida. Beba com moderação.</p>
     </footer>
 
 </body>
