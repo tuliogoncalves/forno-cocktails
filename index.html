@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu do Bar | Moderno</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #d4af37;
+            --secondary-text: #a0a0a0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        header {
+            text-align: center;
+            padding: 4rem 1rem;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            border-bottom: 4px solid var(--accent-color);
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            color: var(--accent-color);
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #fff;
+            font-weight: 300;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .category-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin: 4rem 0 2rem;
+            color: #fff;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .category-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+            margin: 10px auto 0;
+        }
+
+        .drink-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .drink-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .drink-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.15);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .drink-name {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .ingredients {
+            font-size: 0.9rem;
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid #333;
+            padding-bottom: 0.5rem;
+        }
+
+        .description {
+            font-size: 0.9rem;
+            color: var(--secondary-text);
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            margin-top: 4rem;
+            background-color: #000;
+            color: var(--secondary-text);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            .category-title { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>THE BAR</h1>
+        <p>Cocktail Menu & Lounge</p>
+    </header>
+
+    <div class="container">
+
+        <h2 class="category-title">Clássicos da Casa</h2>
+        <div class="drink-grid">
+            
+            <article class="drink-card">
+                <img src="static/images/caipirinha_brazilian_947f5b0e.jpg" alt="Caipirinha" class="card-image">
+                <div class="card-content">
+                    <h3 class="drink-name">Caipirinha Tradicional</h3>
+                    <p class="ingredients">Cachaça premium, limão fresco, açúcar e gelo.</p>
+                    <p class="description">O clássico brasileiro, equilibrado e refrescante.</p>
+                </div>
+            </article>
+
+            <article class="drink-card">
+                <img src="static/images/caipiroska_vodka_lim_c7c1b383.jpg" alt="Caipiroska" class="card-image">
+                <div class="card-content">
+                    <h3 class="drink-name">Caipiroska</h3>
+                    <p class="ingredients">Vodka, limão fresco, açúcar e gelo.</p>
+                    <p class="description">Versão moderna do clássico, com perfil mais neutro.</p>
+                </div>
+            </article>
+
+            <article class="drink-card">
+                <img src="https://images.unsplash.com/photo-1597075687490-8f673c6c17f6?auto=format&fit=crop&w=600&q=80" alt="Gin Tônica" class="card-image">
+                <div class="card-content">
+                    <h3 class="drink-name">Gin Tônica</h3>
+                    <p class="ingredients">Gin, tônica premium e guarnição cítrica.</p>
+                    <p class="description">Leve, aromático e extremamente versátil.</p>
+                </div>
+            </article>
+
+            <article class="drink-card">
+                <img src="static/images/mojito_cocktail_rum__c43b8ded.jpg" alt="Mojito" class="card-image">
+                <div class="card-content">
+                    <h3 class="drink-name">Mojito</h3>
+                    <p class="ingredients">Rum, hortelã, limão, açúcar e água com gás.</p>
+                    <p class="description">Refrescante, ideal para qualquer ocasião.</p>
+                </div>
+            </article>
+        </div>
+
+        <h2 class="category-title">Clássicos Internacionais</h2>
+        <div class="drink-grid">
+            
+            <article class="drink-card">
+                <img src="static/images/margarita_tequila_co_ca6a52ac.jpg" alt="Margarita" class="card-image">
+                <div class="card-content">
+                    <h3 class="drink-name">Margarita</h3>
+                    <p class="ingredients">Tequila, licor de laranja e suco de limão.</p>
+                    <p class="description">Equilíbrio perfeito entre acidez e intensidade.</p>
+                </div>
+            </article>
+
+            <article class="drink-card">
+                <img src="static/images/dry_martini_cocktail_386515df.jpg" alt="Dry Martini" class="card-image">
+                <div class="card-content">
+                    <h3 class="drink-name">Dry Martini</h3>
+                    <p class="ingredients">Gin (ou vodka) e vermute seco.</p>
+                    <p class="description">Elegante, intenso e atemporal.</p>
+                </div>
+            </article>
+
+            <article class="drink-card">
+                <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=600&q=80" alt="Old Fashioned" class="card-image">
+                <div class="card-content">
+                    <h3 class="drink-name">Old Fashioned</h3>
+                    <p class="ingredients">Whiskey, açúcar, bitter e gelo.</p>
+                    <p class="description">Clássico robusto e sofisticado.</p>
+                </div>
+            </article>
+
+            <article class="drink-card">
+                <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=600&q=80" alt="Negroni" class="card-image">
+                <div class="card-content">
+                    <h3 class="drink-name">Negroni</h3>
+                    <p class="ingredients">Gin, vermute tinto e Campari.</p>
+                    <p class="description">Amargo, encorpado e marcante.</p>
+                </div>
+            </article>
+        </div>
+
+        <h2 class="category-title">Refrescantes & Aperitivos</h2>
+        <div class="drink-grid">
+            
+            <article class="drink-card">
+                <img src="https://images.unsplash.com/photo-1560512823-829485b8bf24?auto=format&fit=crop&w=600&q=80" alt="Aperol Spritz" class="card-image">
+                <div class="card-content">
+                    <h3 class="drink-name">Aperol Spritz</h3>
+                    <p class="ingredients">Aperol, prosecco e água com gás.</p>
+                    <p class="description">Leve, aromático e ideal para happy hour.</p>
+                </div>
+            </article>
+
+            <article class="drink-card">
+                <img src="static/images/whiskey_sour_cocktai_5778b57c.jpg" alt="Whiskey Sour" class="card-image">
+                <div class="card-content">
+                    <h3 class="drink-name">Whiskey Sour</h3>
+                    <p class="ingredients">Whiskey, suco de limão e açúcar.</p>
+                    <p class="description">Equilibrado, com acidez na medida certa.</p>
+                </div>
+            </article>
+
+            <article class="drink-card">
+                <img src="static/images/daiquiri_rum_cocktai_76855591.jpg" alt="Daiquiri" class="card-image">
+                <div class="card-content">
+                    <h3 class="drink-name">Daiquiri</h3>
+                    <p class="ingredients">Rum branco, limão e açúcar.</p>
+                    <p class="description">Simples, clássico e extremamente elegante.</p>
+                </div>
+            </article>
+        </div>
+
+        <h2 class="category-title">Tropicais & Noite</h2>
+        <div class="drink-grid">
+            
+            <article class="drink-card">
+                <img src="static/images/pina_colada_tropical_05630408.jpg" alt="Piña Colada" class="card-image">
+                <div class="card-content">
+                    <h3 class="drink-name">Piña Colada</h3>
+                    <p class="ingredients">Rum, leite de coco e suco de abacaxi.</p>
+                    <p class="description">Cremoso, doce e tropical.</p>
+                </div>
+            </article>
+
+            <article class="drink-card">
+                <img src="static/images/sex_on_the_beach_coc_562690c8.jpg" alt="Sex on the Beach" class="card-image">
+                <div class="card-content">
+                    <h3 class="drink-name">Sex on the Beach</h3>
+                    <p class="ingredients">Vodka, licor de pêssego, laranja e cranberry.</p>
+                    <p class="description">Frutado e descontraído.</p>
+                </div>
+            </article>
+
+            <article class="drink-card">
+                <img src="static/images/cosmopolitan_cocktai_cbe26e57.jpg" alt="Cosmopolitan" class="card-image">
+                <div class="card-content">
+                    <h3 class="drink-name">Cosmopolitan</h3>
+                    <p class="ingredients">Vodka, licor de laranja, cranberry e limão.</p>
+                    <p class="description">Moderno, equilibrado e elegante.</p>
+                </div>
+            </article>
+            
+            <article class="drink-card">
+                <img src="https://images.unsplash.com/photo-1592317180491-9517173b9e4a?auto=format&fit=crop&w=600&q=80" alt="Vodka Energy" class="card-image">
+                <div class="card-content">
+                    <h3 class="drink-name">Vodka com Energético</h3>
+                    <p class="ingredients">Vodka e energético.</p>
+                    <p class="description">Popular, intenso e ideal para noites longas.</p>
+                </div>
+            </article>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 THE BAR - Beba com moderação.</p>
+    </footer>
+
+</body>
+</html>
