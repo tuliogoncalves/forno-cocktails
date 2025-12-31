@@ -222,6 +222,11 @@
 </footer>
 
 <script>
+    const APP_VERSION = "2025-12-31";
+        if (!location.search.includes("v=")) {
+        location.replace(location.pathname + "?v=" + APP_VERSION);
+    }
+
 const drinks = [
 
 /* =========================
