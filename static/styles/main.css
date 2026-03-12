@@ -1,9 +1,11 @@
 :root {
-    --bg-color: #121212;
-    --card-bg: #1e1e1e;
-    --text-color: #e0e0e0;
-    --accent-color: #d4af37;
-    --secondary-text: #a0a0a0;
+    --bg-color: #0d0d0d;
+    --card-bg: #171717;
+    --text-color: #f3f3f3;
+    --accent-color: #d6001c;
+    --accent-dark: #850012;
+    --secondary-text: #c7c7c7;
+    --stripe-dark: #0b0b0b;
 }
 
 * {
@@ -13,7 +15,14 @@
 }
 
 body {
-    background-color: var(--bg-color);
+    background:
+        repeating-linear-gradient(
+            -15deg,
+            var(--stripe-dark) 0,
+            var(--stripe-dark) 28px,
+            #1f1f1f 28px,
+            #1f1f1f 56px
+        );
     color: var(--text-color);
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
@@ -26,33 +35,35 @@ h1, h2, h3 {
 header {
     text-align: center;
     padding: 4rem 1rem;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-    url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1920&q=80');
-    background-size: cover;
-    background-position: center;
-    border-bottom: 4px solid var(--accent-color);
+    background:
+        linear-gradient(135deg, rgba(214,0,28,0.8), rgba(11,11,11,0.88)),
+        linear-gradient(90deg, rgba(0,0,0,0.35) 0, rgba(0,0,0,0.35) 25%, transparent 25%, transparent 50%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.35) 75%, transparent 75%, transparent 100%);
+    background-size: cover, 160px 160px;
+    border-bottom: 5px solid var(--accent-color);
+    box-shadow: inset 0 -18px 30px rgba(0, 0, 0, 0.45);
 }
 
 header h1 {
     font-size: 3.5rem;
-    color: var(--accent-color);
+    color: #fff;
     letter-spacing: 2px;
+    text-shadow: 0 6px 15px rgba(0, 0, 0, 0.45);
 }
 
 .hero-tagline {
     font-size: 1rem;
-    color: var(--accent-color);
+    color: #ffd7dc;
     letter-spacing: 3px;
     text-transform: uppercase;
     margin-bottom: 1rem;
-    font-weight: 300;
+    font-weight: 600;
 }
 
 .hero-subtitle {
     font-size: 1.1rem;
     color: #fff;
     font-weight: 300;
-    max-width: 600px;
+    max-width: 700px;
     margin: 0.5rem auto 0;
 }
 
@@ -67,12 +78,12 @@ header h1 {
     padding: 3rem 2rem;
     max-width: 800px;
     margin: 0 auto 3rem;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #3a3a3a;
 }
 
 .institutional h2 {
-    color: var(--accent-color);
-    font-size: 1.8rem;
+    color: #ff425a;
+    font-size: 1.9rem;
     margin-bottom: 1.5rem;
     font-style: italic;
 }
@@ -86,7 +97,7 @@ header h1 {
 
 .institutional .signature {
     margin-top: 1.5rem;
-    color: var(--accent-color);
+    color: #ff425a;
     font-size: 0.9rem;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -103,10 +114,11 @@ header h1 {
 .category-title::after {
     content: '';
     display: block;
-    width: 60px;
-    height: 3px;
-    background-color: var(--accent-color);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #c1001a, #ff4058);
     margin: 10px auto 0;
+    border-radius: 999px;
 }
 
 .drink-grid {
@@ -116,22 +128,26 @@ header h1 {
 }
 
 .drink-card {
-    background-color: var(--card-bg);
+    background:
+        linear-gradient(160deg, rgba(214,0,28,0.12), rgba(0,0,0,0.08)),
+        var(--card-bg);
+    border: 1px solid rgba(255, 64, 88, 0.35);
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .drink-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(212,175,55,0.15);
+    box-shadow: 0 12px 26px rgba(214, 0, 28, 0.24);
+    border-color: rgba(255, 64, 88, 0.7);
 }
 
 .card-image {
     width: 100%;
     height: 60%;
-    object-fit: fill;
+    object-fit: cover;
 }
 
 .card-content {
@@ -140,7 +156,7 @@ header h1 {
 
 .drink-name {
     font-size: 1.5rem;
-    color: var(--accent-color);
+    color: #ff4d63;
     margin-bottom: 0.5rem;
 }
 
@@ -149,7 +165,7 @@ header h1 {
     color: #fff;
     font-weight: 600;
     margin-bottom: 0.5rem;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #3d3d3d;
     padding-bottom: 0.5rem;
 }
 
@@ -163,7 +179,8 @@ footer {
     text-align: center;
     padding: 3rem;
     margin-top: 4rem;
-    background-color: #000;
+    background: linear-gradient(90deg, #0a0a0a, #1a1a1a);
+    border-top: 2px solid var(--accent-dark);
     color: var(--secondary-text);
     font-size: 0.9rem;
 }
